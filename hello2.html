@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" value="ios" v-model="language">ios
+        <input type="checkbox" value="java" v-model="language">java
+        <input type="checkbox" value="php" v-model="language">php
+        <br>您选择了：{{language}}
+    </div>
+</body>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    const  app = new Vue({
+        el:"#app",
+        data:{
+            name:"刘德华",
+            num:100,
+            language:[]
+        },
+        methods:{
+            incr(){
+                console.log(this);
+                this.num++;
+            }
+        },
+        created(){
+            this.num =1000;
+        }
+    })
+</script>
+</html>
